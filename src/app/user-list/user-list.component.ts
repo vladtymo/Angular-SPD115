@@ -9,4 +9,8 @@ import { IUser, USERS } from '../user/user';
 export class UserListComponent {
 
   users: IUser[] = USERS;
+
+  clearList(): void {
+    this.users = [];
+  }
 }

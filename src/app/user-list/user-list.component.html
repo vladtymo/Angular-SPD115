@@ -1,4 +1,14 @@
 <h2>User List</h2>
 
+<div>
+    <button (click)="clearList()">Clear All</button>
+</div>
+
+<div *ngIf="!users || users.length == 0">
+    <h3>List is Empty!</h3>
+    <img src="https://cdn.dribbble.com/users/665029/screenshots/16162764/media/3ea69cb1655fba401acc6c4328d38633.gif" alt="">
+</div>
+
 <!-- Structural Directices: *ngFor *ngIf *ngSwitch -->
 <app-user *ngFor="let i of users" [user]="i"></app-user>
+
